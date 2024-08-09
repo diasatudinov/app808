@@ -11,6 +11,13 @@
 		2B55F5D02C662F6C0060D9B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5CF2C662F6C0060D9B0 /* ContentView.swift */; };
 		2B55F5D22C662F700060D9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B55F5D12C662F700060D9B0 /* Assets.xcassets */; };
 		2B55F5D52C662F700060D9B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B55F5D42C662F700060D9B0 /* Preview Assets.xcassets */; };
+		2B55F5DD2C6640A30060D9B0 /* LoaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5DC2C6640A30060D9B0 /* LoaderUIView.swift */; };
+		2B55F5E22C66424C0060D9B0 /* ReOnboardingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5E12C66424C0060D9B0 /* ReOnboardingUIView.swift */; };
+		2B55F5E52C6642710060D9B0 /* UsOnboardingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5E42C6642710060D9B0 /* UsOnboardingUIView.swift */; };
+		2B55F5E82C6642FC0060D9B0 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 2B55F5E72C6642FC0060D9B0 /* OneSignalExtension */; };
+		2B55F5EA2C6642FC0060D9B0 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2B55F5E92C6642FC0060D9B0 /* OneSignalFramework */; };
+		2B55F5EC2C6642FC0060D9B0 /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 2B55F5EB2C6642FC0060D9B0 /* OneSignalInAppMessages */; };
+		2B55F5EE2C6642FC0060D9B0 /* OneSignalLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 2B55F5ED2C6642FC0060D9B0 /* OneSignalLocation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,9 @@
 		2B55F5CF2C662F6C0060D9B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B55F5D12C662F700060D9B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B55F5D42C662F700060D9B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B55F5DC2C6640A30060D9B0 /* LoaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = "<group>"; };
+		2B55F5E12C66424C0060D9B0 /* ReOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReOnboardingUIView.swift; sourceTree = "<group>"; };
+		2B55F5E42C6642710060D9B0 /* UsOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsOnboardingUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B55F5EC2C6642FC0060D9B0 /* OneSignalInAppMessages in Frameworks */,
+				2B55F5EA2C6642FC0060D9B0 /* OneSignalFramework in Frameworks */,
+				2B55F5EE2C6642FC0060D9B0 /* OneSignalLocation in Frameworks */,
+				2B55F5E82C6642FC0060D9B0 /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +65,9 @@
 		2B55F5CC2C662F6C0060D9B0 /* app808 */ = {
 			isa = PBXGroup;
 			children = (
+				2B55F5DE2C6642160060D9B0 /* First */,
+				2B55F5DF2C66421B0060D9B0 /* Second */,
+				2B55F5DB2C6640900060D9B0 /* Loader */,
 				2B55F5CD2C662F6C0060D9B0 /* app808App.swift */,
 				2B55F5CF2C662F6C0060D9B0 /* ContentView.swift */,
 				2B55F5D12C662F700060D9B0 /* Assets.xcassets */,
@@ -65,6 +82,46 @@
 				2B55F5D42C662F700060D9B0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B55F5DB2C6640900060D9B0 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5DC2C6640A30060D9B0 /* LoaderUIView.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		2B55F5DE2C6642160060D9B0 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5E02C66423E0060D9B0 /* Onboarding */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		2B55F5DF2C66421B0060D9B0 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5E32C6642520060D9B0 /* Onboarding */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		2B55F5E02C66423E0060D9B0 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5E12C66424C0060D9B0 /* ReOnboardingUIView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2B55F5E32C6642520060D9B0 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5E42C6642710060D9B0 /* UsOnboardingUIView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +140,12 @@
 			dependencies = (
 			);
 			name = app808;
+			packageProductDependencies = (
+				2B55F5E72C6642FC0060D9B0 /* OneSignalExtension */,
+				2B55F5E92C6642FC0060D9B0 /* OneSignalFramework */,
+				2B55F5EB2C6642FC0060D9B0 /* OneSignalInAppMessages */,
+				2B55F5ED2C6642FC0060D9B0 /* OneSignalLocation */,
+			);
 			productName = app808;
 			productReference = 2B55F5CA2C662F6C0060D9B0 /* app808.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 2B55F5C12C662F6C0060D9B0;
+			packageReferences = (
+				2B55F5E62C6642FC0060D9B0 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+			);
 			productRefGroup = 2B55F5CB2C662F6C0060D9B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +205,9 @@
 			files = (
 				2B55F5D02C662F6C0060D9B0 /* ContentView.swift in Sources */,
 				2B55F5CE2C662F6C0060D9B0 /* app808App.swift in Sources */,
+				2B55F5E52C6642710060D9B0 /* UsOnboardingUIView.swift in Sources */,
+				2B55F5E22C66424C0060D9B0 /* ReOnboardingUIView.swift in Sources */,
+				2B55F5DD2C6640A30060D9B0 /* LoaderUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -342,6 +411,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B55F5E62C6642FC0060D9B0 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B55F5E72C6642FC0060D9B0 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B55F5E62C6642FC0060D9B0 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalExtension;
+		};
+		2B55F5E92C6642FC0060D9B0 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B55F5E62C6642FC0060D9B0 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalFramework;
+		};
+		2B55F5EB2C6642FC0060D9B0 /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B55F5E62C6642FC0060D9B0 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalInAppMessages;
+		};
+		2B55F5ED2C6642FC0060D9B0 /* OneSignalLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B55F5E62C6642FC0060D9B0 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalLocation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B55F5C22C662F6C0060D9B0 /* Project object */;
 }
