@@ -18,6 +18,12 @@
 		2B55F5EA2C6642FC0060D9B0 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2B55F5E92C6642FC0060D9B0 /* OneSignalFramework */; };
 		2B55F5EC2C6642FC0060D9B0 /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 2B55F5EB2C6642FC0060D9B0 /* OneSignalInAppMessages */; };
 		2B55F5EE2C6642FC0060D9B0 /* OneSignalLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 2B55F5ED2C6642FC0060D9B0 /* OneSignalLocation */; };
+		2B55F5F12C6A12310060D9B0 /* MainUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5F02C6A12310060D9B0 /* MainUIView.swift */; };
+		2B55F5F72C6A28BA0060D9B0 /* BadgesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5F62C6A28BA0060D9B0 /* BadgesUIView.swift */; };
+		2B55F5F92C6A2F560060D9B0 /* BadgesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5F82C6A2F560060D9B0 /* BadgesCell.swift */; };
+		2B55F5FB2C6A32EA0060D9B0 /* BadgesDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5FA2C6A32EA0060D9B0 /* BadgesDetails.swift */; };
+		2B55F6002C6A37170060D9B0 /* SettingsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5FF2C6A37170060D9B0 /* SettingsUIView.swift */; };
+		2B55F6022C6A37AA0060D9B0 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F6012C6A37AA0060D9B0 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,12 @@
 		2B55F5DC2C6640A30060D9B0 /* LoaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = "<group>"; };
 		2B55F5E12C66424C0060D9B0 /* ReOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReOnboardingUIView.swift; sourceTree = "<group>"; };
 		2B55F5E42C6642710060D9B0 /* UsOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsOnboardingUIView.swift; sourceTree = "<group>"; };
+		2B55F5F02C6A12310060D9B0 /* MainUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUIView.swift; sourceTree = "<group>"; };
+		2B55F5F62C6A28BA0060D9B0 /* BadgesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesUIView.swift; sourceTree = "<group>"; };
+		2B55F5F82C6A2F560060D9B0 /* BadgesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCell.swift; sourceTree = "<group>"; };
+		2B55F5FA2C6A32EA0060D9B0 /* BadgesDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesDetails.swift; sourceTree = "<group>"; };
+		2B55F5FF2C6A37170060D9B0 /* SettingsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUIView.swift; sourceTree = "<group>"; };
+		2B55F6012C6A37AA0060D9B0 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,9 @@
 		2B55F5DE2C6642160060D9B0 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				2B55F5FC2C6A36FC0060D9B0 /* Settings */,
+				2B55F5F22C6A28950060D9B0 /* Badges */,
+				2B55F5EF2C6A120D0060D9B0 /* Main */,
 				2B55F5E02C66423E0060D9B0 /* Onboarding */,
 			);
 			path = First;
@@ -122,6 +137,73 @@
 				2B55F5E42C6642710060D9B0 /* UsOnboardingUIView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2B55F5EF2C6A120D0060D9B0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5F02C6A12310060D9B0 /* MainUIView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2B55F5F22C6A28950060D9B0 /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5F52C6A28AB0060D9B0 /* Model */,
+				2B55F5F42C6A28A70060D9B0 /* View */,
+				2B55F5F32C6A289F0060D9B0 /* ViewModel */,
+			);
+			path = Badges;
+			sourceTree = "<group>";
+		};
+		2B55F5F32C6A289F0060D9B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2B55F5F42C6A28A70060D9B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5F62C6A28BA0060D9B0 /* BadgesUIView.swift */,
+				2B55F5F82C6A2F560060D9B0 /* BadgesCell.swift */,
+				2B55F5FA2C6A32EA0060D9B0 /* BadgesDetails.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B55F5F52C6A28AB0060D9B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B55F5FC2C6A36FC0060D9B0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5FE2C6A37090060D9B0 /* View */,
+				2B55F5FD2C6A37040060D9B0 /* ViewModel */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2B55F5FD2C6A37040060D9B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F6012C6A37AA0060D9B0 /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2B55F5FE2C6A37090060D9B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F5FF2C6A37170060D9B0 /* SettingsUIView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,10 +286,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B55F5D02C662F6C0060D9B0 /* ContentView.swift in Sources */,
+				2B55F5F92C6A2F560060D9B0 /* BadgesCell.swift in Sources */,
 				2B55F5CE2C662F6C0060D9B0 /* app808App.swift in Sources */,
+				2B55F5F72C6A28BA0060D9B0 /* BadgesUIView.swift in Sources */,
+				2B55F5FB2C6A32EA0060D9B0 /* BadgesDetails.swift in Sources */,
+				2B55F6002C6A37170060D9B0 /* SettingsUIView.swift in Sources */,
 				2B55F5E52C6642710060D9B0 /* UsOnboardingUIView.swift in Sources */,
 				2B55F5E22C66424C0060D9B0 /* ReOnboardingUIView.swift in Sources */,
+				2B55F6022C6A37AA0060D9B0 /* SettingsViewModel.swift in Sources */,
 				2B55F5DD2C6640A30060D9B0 /* LoaderUIView.swift in Sources */,
+				2B55F5F12C6A12310060D9B0 /* MainUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
