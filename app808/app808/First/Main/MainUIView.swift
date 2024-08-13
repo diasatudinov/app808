@@ -15,6 +15,8 @@ struct MainUIView: View {
     @State private var view: Views = .main
     @ObservedObject var challengesVM = ChallengeViewModel()
     @ObservedObject var settingsVM = SettingsViewModel()
+    @ObservedObject var badgesVM = BadgesViewModel()
+    
     var body: some View {
         ZStack {
             Color.viewBg.ignoresSafeArea()
@@ -33,7 +35,7 @@ struct MainUIView: View {
             case .challenges:
                 ChallengesUIView(viewModel: challengesVM, view: $view)
             case .badges:
-                BadgesUIView(view: $view)
+                BadgesUIView(view: $view, viewModel: badgesVM, challengeVM: challengesVM)
             case .settings:
                 SettingsUIView(viewModel: settingsVM, view: $view)
             }

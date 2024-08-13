@@ -12,9 +12,10 @@ struct Challenge: Identifiable, Hashable, Codable {
     var name: String
     var totalDays: Double
     var finishedDays: Double
+    var isDone: Bool = false
     
     enum CodingKeys: String, CodingKey {
-        case id, name, totalDays, finishedDays
+        case id, name, totalDays, finishedDays, isDone
     }
 }
 
