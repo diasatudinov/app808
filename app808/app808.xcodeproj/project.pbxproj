@@ -29,6 +29,8 @@
 		2B55F60C2C6B5A650060D9B0 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F60B2C6B5A650060D9B0 /* Challenge.swift */; };
 		2B55F60E2C6B5B270060D9B0 /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F60D2C6B5B260060D9B0 /* ChallengeViewModel.swift */; };
 		2B55F6102C6B5E440060D9B0 /* ChallengeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F60F2C6B5E440060D9B0 /* ChallengeDetails.swift */; };
+		2B55F6122C6B92090060D9B0 /* BadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F6112C6B92090060D9B0 /* BadgesViewModel.swift */; };
+		2B55F6142C6B93960060D9B0 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F6132C6B93960060D9B0 /* Badge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		2B55F60B2C6B5A650060D9B0 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		2B55F60D2C6B5B260060D9B0 /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
 		2B55F60F2C6B5E440060D9B0 /* ChallengeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetails.swift; sourceTree = "<group>"; };
+		2B55F6112C6B92090060D9B0 /* BadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesViewModel.swift; sourceTree = "<group>"; };
+		2B55F6132C6B93960060D9B0 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 		2B55F5F32C6A289F0060D9B0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2B55F6112C6B92090060D9B0 /* BadgesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 		2B55F5F52C6A28AB0060D9B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2B55F6132C6B93960060D9B0 /* Badge.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 				2B55F5F72C6A28BA0060D9B0 /* BadgesUIView.swift in Sources */,
 				2B55F5FB2C6A32EA0060D9B0 /* BadgesDetails.swift in Sources */,
 				2B55F6002C6A37170060D9B0 /* SettingsUIView.swift in Sources */,
+				2B55F6142C6B93960060D9B0 /* Badge.swift in Sources */,
 				2B55F5E52C6642710060D9B0 /* UsOnboardingUIView.swift in Sources */,
 				2B55F60C2C6B5A650060D9B0 /* Challenge.swift in Sources */,
 				2B55F5E22C66424C0060D9B0 /* ReOnboardingUIView.swift in Sources */,
@@ -347,6 +354,7 @@
 				2B55F6022C6A37AA0060D9B0 /* SettingsViewModel.swift in Sources */,
 				2B55F60A2C6B55780060D9B0 /* ChallengeCell.swift in Sources */,
 				2B55F5DD2C6640A30060D9B0 /* LoaderUIView.swift in Sources */,
+				2B55F6122C6B92090060D9B0 /* BadgesViewModel.swift in Sources */,
 				2B55F5F12C6A12310060D9B0 /* MainUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
