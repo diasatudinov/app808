@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct ChallengeCell: View {
+    var text: String
+    var days: Double
+    var daysFinish: Double
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.cardBg.ignoresSafeArea()
+            
+            VStack {
+                Text(text)
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundColor(.white)
+                    .padding(.bottom)
+                
+                    ProgressView(value: Double(daysFinish), total: days)
+                        .progressViewStyle(LinearProgressViewStyle())
+                        .accentColor(Color.progress)
+                        .scaleEffect(y: 3.2, anchor: .center)
+                        .padding(.horizontal)
+                        
+                        
+                
+                
+            }
+            
+        }.cornerRadius(20)
+            .frame(height: 104)
     }
 }
 
 #Preview {
-    ChallengeCell()
+    ChallengeCell(text: "A month of morning exercises", days: 30, daysFinish: 20)
 }

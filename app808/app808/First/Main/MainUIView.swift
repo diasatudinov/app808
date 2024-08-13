@@ -13,6 +13,7 @@ enum Views {
 
 struct MainUIView: View {
     @State private var view: Views = .main
+    @ObservedObject var challengesVM = ChallengeViewModel()
     @ObservedObject var settingsVM = SettingsViewModel()
     var body: some View {
         ZStack {
@@ -20,7 +21,7 @@ struct MainUIView: View {
             switch view {
             case .main:
                 VStack(spacing: 12) {
-                    MainOne()
+                    MainOne(view: $view)
                     HStack(spacing: 12) {
                         MainTwo(view: $view)
                         MainThree(view: $view)
@@ -30,7 +31,7 @@ struct MainUIView: View {
                 }.padding(.horizontal)
                     .padding(.top, 25)
             case .challenges:
-                Text("challenges")
+                ChallengesUIView(viewModel: challengesVM, view: $view)
             case .badges:
                 BadgesUIView(view: $view)
             case .settings:
@@ -45,6 +46,7 @@ struct MainUIView: View {
 }
 
 struct MainOne: View {
+    @Binding var view: Views
     var body: some View {
         ZStack {
             Color.cardBg.ignoresSafeArea()
@@ -66,6 +68,7 @@ struct MainOne: View {
                 }.padding(.top, -70)
                 
                 Button {
+                    view = .challenges
                 } label: {
                     ZStack(alignment: .center) {
                         Rectangle()
