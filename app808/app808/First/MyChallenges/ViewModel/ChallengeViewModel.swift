@@ -11,6 +11,7 @@ class ChallengeViewModel: ObservableObject {
     @Published var challenges: [Challenge] = [
         Challenge(name: "A month of morning exercises", totalDays: 30, finishedDays: 1),
         Challenge(name: "The goal: 30 days of running", totalDays: 30, finishedDays: 1)
+        
     ] {
         didSet {
             saveChallenges()
@@ -80,7 +81,18 @@ class ChallengeViewModel: ObservableObject {
     func restartChallenge(for challenge: Challenge) {
         if let index = challenges.firstIndex(where: { $0.id == challenge.id }) {
             challenges[index].finishedDays = 1
+            challenges[index].isDone = false
         }
+    }
+    
+    func finishChallenge(_ challenge: Challenge) {
+        if let index = challenges.firstIndex(where: { $0.id == challenge.id }) {
+            challenges[index].isDone = true
+        }
+    }
+    
+    var completedChallengesCount: Int {
+        challenges.filter { $0.isDone == true }.count
     }
     
 }

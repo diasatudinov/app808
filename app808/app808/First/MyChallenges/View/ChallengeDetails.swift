@@ -105,7 +105,6 @@ struct ChallengeDetails: View {
                 Spacer()
                 if isFull {
                     Button {
-                        
                         viewModel.restartChallenge(for: challange)
                         isEditing = false
                         isFull = false
@@ -134,11 +133,13 @@ struct ChallengeDetails: View {
                         isEditing = true
                     } else {
                         if challange.totalDays == editedDays {
+                            viewModel.finishChallenge(challange)
                             isFull = true
                         }
                         viewModel.editChallenge(for: challange, finishedDays: Double(editedDays))
                         isEditing = false
                     }
+                    print(viewModel.challenges)
                 } label: {
                 
                         if isEditing {
