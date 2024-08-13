@@ -36,23 +36,27 @@ struct BadgesDetails: View {
                 ZStack(alignment: .center) {
                     Rectangle()
                         .frame(height: 54)
-                        .foregroundColor(.mainBtn)
+                        .foregroundColor(.mainBtn.opacity(imageName.contains("Off") ? 0.5 : 1))
                         .font(.system(size: 17, weight: .bold))
                         .cornerRadius(16)
-                    
-                    HStack {
-                        Image(systemName: "checkmark")
-                        Text("Executed by")
-                    }.font(.system(size: 17)).foregroundColor(.white)
+                    if imageName.contains("Off") {
+                        HStack {
+                            Text("Done")
+                        }.font(.system(size: 17)).foregroundColor(.white.opacity(0.5))
+                    } else {
+                        HStack {
+                            Image(systemName: "checkmark")
+                            Text("Executed by")
+                        }.font(.system(size: 17)).foregroundColor(.white)
+                    }
                     
                 }.padding(.horizontal)
             }
-            
             
         }.navigationTitle("Badge")
     }
 }
 
 #Preview {
-    BadgesDetails(imageName: "award1", text: "First victory", num: 1)
+    BadgesDetails(imageName: "awardOff1", text: "First victory", num: 1)
 }

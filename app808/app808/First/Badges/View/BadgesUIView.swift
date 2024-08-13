@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BadgesUIView: View {
     @Binding var view: Views
+    @ObservedObject var viewModel: BadgesViewModel
+    @ObservedObject var challengeVM: ChallengeViewModel
     var body: some View {
         NavigationView {
             ZStack {
@@ -42,18 +44,18 @@ struct BadgesUIView: View {
                     }
                     
                     HStack {
-                        BadgesCell(imageName: "award1", text: "First victory", num: 1)
-                        BadgesCell(imageName: "award2", text: "Five steps to success", num: 5)
+                        BadgesCell(imageName: challengeVM.completedChallengesCount > 0 ? viewModel.badges[0].imageName : viewModel.badges[0].imageNameOff, text: viewModel.badges[0].text, num: viewModel.badges[0].num)
+                        BadgesCell(imageName: challengeVM.completedChallengesCount > 4 ? viewModel.badges[1].imageName : viewModel.badges[1].imageNameOff, text: viewModel.badges[1].text, num: viewModel.badges[1].num)
                     }
                     
                     HStack {
-                        BadgesCell(imageName: "award3", text: "Middle of the road", num: 10)
-                        BadgesCell(imageName: "award4", text: "Fifteenth milestone", num: 15)
+                        BadgesCell(imageName: challengeVM.completedChallengesCount > 9 ? viewModel.badges[2].imageName : viewModel.badges[2].imageNameOff, text: viewModel.badges[2].text, num: viewModel.badges[2].num)
+                        BadgesCell(imageName: challengeVM.completedChallengesCount > 14 ? viewModel.badges[3].imageName : viewModel.badges[3].imageNameOff, text: viewModel.badges[3].text, num: viewModel.badges[3].num)
                     }
                     
                     HStack {
-                        BadgesCell(imageName: "award5", text: "Experienced Seeker", num: 20)
-                        BadgesCell(imageName: "award6", text: "Conqueror of peaks", num: 25)
+                        BadgesCell(imageName: challengeVM.completedChallengesCount > 19 ? viewModel.badges[4].imageName : viewModel.badges[4].imageNameOff, text: viewModel.badges[4].text, num: viewModel.badges[4].num)
+                        BadgesCell(imageName: challengeVM.completedChallengesCount > 24 ? viewModel.badges[5].imageName : viewModel.badges[5].imageNameOff, text: viewModel.badges[5].text, num: viewModel.badges[5].num)
                     }
                     
                     Spacer()
@@ -65,5 +67,5 @@ struct BadgesUIView: View {
 }
 
 #Preview {
-    BadgesUIView(view: .constant(.badges))
+    BadgesUIView(view: .constant(.badges), viewModel: BadgesViewModel(), challengeVM: ChallengeViewModel())
 }
