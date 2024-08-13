@@ -24,6 +24,11 @@
 		2B55F5FB2C6A32EA0060D9B0 /* BadgesDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5FA2C6A32EA0060D9B0 /* BadgesDetails.swift */; };
 		2B55F6002C6A37170060D9B0 /* SettingsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F5FF2C6A37170060D9B0 /* SettingsUIView.swift */; };
 		2B55F6022C6A37AA0060D9B0 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F6012C6A37AA0060D9B0 /* SettingsViewModel.swift */; };
+		2B55F6082C6B54030060D9B0 /* ChallengesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F6072C6B54030060D9B0 /* ChallengesUIView.swift */; };
+		2B55F60A2C6B55780060D9B0 /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F6092C6B55780060D9B0 /* ChallengeCell.swift */; };
+		2B55F60C2C6B5A650060D9B0 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F60B2C6B5A650060D9B0 /* Challenge.swift */; };
+		2B55F60E2C6B5B270060D9B0 /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F60D2C6B5B260060D9B0 /* ChallengeViewModel.swift */; };
+		2B55F6102C6B5E440060D9B0 /* ChallengeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55F60F2C6B5E440060D9B0 /* ChallengeDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		2B55F5FA2C6A32EA0060D9B0 /* BadgesDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesDetails.swift; sourceTree = "<group>"; };
 		2B55F5FF2C6A37170060D9B0 /* SettingsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUIView.swift; sourceTree = "<group>"; };
 		2B55F6012C6A37AA0060D9B0 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		2B55F6072C6B54030060D9B0 /* ChallengesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesUIView.swift; sourceTree = "<group>"; };
+		2B55F6092C6B55780060D9B0 /* ChallengeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCell.swift; sourceTree = "<group>"; };
+		2B55F60B2C6B5A650060D9B0 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		2B55F60D2C6B5B260060D9B0 /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
+		2B55F60F2C6B5E440060D9B0 /* ChallengeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,7 @@
 		2B55F5DE2C6642160060D9B0 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				2B55F6032C6B53230060D9B0 /* MyChallenges */,
 				2B55F5FC2C6A36FC0060D9B0 /* Settings */,
 				2B55F5F22C6A28950060D9B0 /* Badges */,
 				2B55F5EF2C6A120D0060D9B0 /* Main */,
@@ -206,6 +217,42 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2B55F6032C6B53230060D9B0 /* MyChallenges */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F6052C6B533F0060D9B0 /* Model */,
+				2B55F6062C6B53430060D9B0 /* View */,
+				2B55F6042C6B53380060D9B0 /* ViewModel */,
+			);
+			path = MyChallenges;
+			sourceTree = "<group>";
+		};
+		2B55F6042C6B53380060D9B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F60D2C6B5B260060D9B0 /* ChallengeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2B55F6052C6B533F0060D9B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F60B2C6B5A650060D9B0 /* Challenge.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B55F6062C6B53430060D9B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B55F6072C6B54030060D9B0 /* ChallengesUIView.swift */,
+				2B55F6092C6B55780060D9B0 /* ChallengeCell.swift */,
+				2B55F60F2C6B5E440060D9B0 /* ChallengeDetails.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,14 +333,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B55F5D02C662F6C0060D9B0 /* ContentView.swift in Sources */,
+				2B55F60E2C6B5B270060D9B0 /* ChallengeViewModel.swift in Sources */,
 				2B55F5F92C6A2F560060D9B0 /* BadgesCell.swift in Sources */,
 				2B55F5CE2C662F6C0060D9B0 /* app808App.swift in Sources */,
 				2B55F5F72C6A28BA0060D9B0 /* BadgesUIView.swift in Sources */,
 				2B55F5FB2C6A32EA0060D9B0 /* BadgesDetails.swift in Sources */,
 				2B55F6002C6A37170060D9B0 /* SettingsUIView.swift in Sources */,
 				2B55F5E52C6642710060D9B0 /* UsOnboardingUIView.swift in Sources */,
+				2B55F60C2C6B5A650060D9B0 /* Challenge.swift in Sources */,
 				2B55F5E22C66424C0060D9B0 /* ReOnboardingUIView.swift in Sources */,
+				2B55F6102C6B5E440060D9B0 /* ChallengeDetails.swift in Sources */,
+				2B55F6082C6B54030060D9B0 /* ChallengesUIView.swift in Sources */,
 				2B55F6022C6A37AA0060D9B0 /* SettingsViewModel.swift in Sources */,
+				2B55F60A2C6B55780060D9B0 /* ChallengeCell.swift in Sources */,
 				2B55F5DD2C6640A30060D9B0 /* LoaderUIView.swift in Sources */,
 				2B55F5F12C6A12310060D9B0 /* MainUIView.swift in Sources */,
 			);
