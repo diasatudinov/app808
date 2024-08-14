@@ -10,12 +10,14 @@ import SwiftUI
 struct ChallengesUIView: View {
     @ObservedObject var viewModel: ChallengeViewModel
     @Binding var view: Views
+    @State private var showAddChallangeSheet = false
     var body: some View {
         NavigationView {
             ZStack {
                 Color.viewBg.ignoresSafeArea()
                 
                 VStack {
+                    
                     HStack {
                         Button {
                             view = .main
@@ -42,27 +44,42 @@ struct ChallengesUIView: View {
                             
                         }
                     }
-                    
-                    ScrollView {
-                        VStack(spacing: 8) {
-                            ForEach(viewModel.challenges, id:\.self) { challenge in
-                                NavigationLink(destination: ChallengeDetails(viewModel: viewModel, challange: challenge)) {
-                                    ChallengeCell(text: challenge.name, days: challenge.totalDays, daysFinish: challenge.finishedDays)
+                    if viewModel.challenges.isEmpty {
+                        ZStack {
+                            Color.cardBg.ignoresSafeArea()
+                            VStack(spacing: 7) {
+                                Image("emptyListLogo")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: 160)
+                                VStack {
+                                    Text("Create a challenge")
+                                        .font(.system(size: 22, weight: .bold))
+                                        .foregroundColor(.white)
+                                    Text("Your list of challenges is currently empty")
+                                        .font(.system(size: 16))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white.opacity(0.7))
                                 }
-                                
-//                                NavigationLink {
-//                                    ChallengeDetails(viewModel: viewModel, challange: challenge)
-//                                } label: {
-//                                    ChallengeCell(text: challenge.name, days: challenge.totalDays, daysFinish: challenge.finishedDays)
-//                                }
-                                
+                            }
+                            
+                        }.cornerRadius(20)
+                            .frame(height: 300)
+                    } else {
+                        ScrollView {
+                            VStack(spacing: 8) {
+                                ForEach(viewModel.challenges, id:\.self) { challenge in
+                                    NavigationLink(destination: ChallengeDetails(viewModel: viewModel, challange: challenge)) {
+                                        ChallengeCell(text: challenge.name, days: challenge.totalDays, daysFinish: challenge.finishedDays)
+                                    }
+                                    
+                                }
                             }
                         }
                     }
-                    
                     Spacer()
                     Button {
-                        
+                        showAddChallangeSheet = true
                     } label: {
                         ZStack(alignment: .center) {
                             Rectangle()
@@ -80,6 +97,9 @@ struct ChallengesUIView: View {
                     }
                 }.padding(.horizontal)
                     .padding(.top)
+                    .sheet(isPresented: $showAddChallangeSheet) {
+                        NewChallengeUIView(viewModel: viewModel, showAddChallangeSheet: $showAddChallangeSheet)
+                    }
             }
         }
     }
