@@ -37,7 +37,7 @@ struct MainUIView: View {
             case .badges:
                 BadgesUIView(view: $view, viewModel: badgesVM, challengeVM: challengesVM)
             case .settings:
-                SettingsUIView(viewModel: settingsVM, view: $view)
+                SettingsUIView(viewModel: settingsVM, challengeVM: challengesVM, view: $view)
             }
         }
     }

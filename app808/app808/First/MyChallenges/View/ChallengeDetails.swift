@@ -42,16 +42,38 @@ struct ChallengeDetails: View {
                         }
                     }
                     Spacer()
-                    
-                    Text("Challenge")
-                        .font(.system(size: 17, weight: .semibold))
-                        .foregroundColor(.white)
+                    if isEditing {
+                        Text("Edit challenge")
+                            .font(.system(size: 17, weight: .semibold))
+                            .foregroundColor(.white)
+                    } else {
+                        Text("Challenge")
+                            .font(.system(size: 17, weight: .semibold))
+                            .foregroundColor(.white)
+                    }
                     Spacer()
-                    ZStack {
-                        Rectangle()
-                            .frame(width: 36, height: 36)
-                            .foregroundColor(.clear)
-                        
+                    if isEditing {
+                        Button {
+                            viewModel.deleteChallenge(for: challange)
+                        } label: {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 32, height: 32)
+                                    .cornerRadius(12)
+                                    .foregroundColor(.red.opacity(0.25))
+                                Image(systemName: "trash")
+                                    .foregroundColor(.red)
+                                
+                            }
+                        }
+                    } else {
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 32, height: 32)
+                                .foregroundColor(.clear)
+                           
+                            
+                        }
                     }
                 }
                 
