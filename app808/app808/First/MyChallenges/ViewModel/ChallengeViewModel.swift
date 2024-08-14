@@ -95,5 +95,12 @@ class ChallengeViewModel: ObservableObject {
         challenges.filter { $0.isDone == true }.count
     }
     
+    func reset() {
+        for index in 0...challenges.count - 1 {
+            challenges[index].finishedDays = 1
+            challenges[index].isDone = false
+        }
+    }
+    
 }
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsUIView: View {
     @ObservedObject var viewModel: SettingsViewModel
+    @ObservedObject var challengeVM: ChallengeViewModel
     @Binding var view: Views
     var body: some View {
         ZStack {
@@ -170,6 +171,7 @@ struct SettingsUIView: View {
                                 Spacer()
                                 Button {
                                     //RESET
+                                    challengeVM.reset()
                                 } label: {
                                     ZStack(alignment: .center) {
                                         Rectangle()
@@ -196,5 +198,5 @@ struct SettingsUIView: View {
 }
 
 #Preview {
-    SettingsUIView(viewModel: SettingsViewModel(), view: .constant(.settings))
+    SettingsUIView(viewModel: SettingsViewModel(), challengeVM: ChallengeViewModel(), view: .constant(.settings))
 }
