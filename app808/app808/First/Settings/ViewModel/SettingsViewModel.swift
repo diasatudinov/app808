@@ -12,7 +12,7 @@ class SettingsViewModel: ObservableObject {
     let standardNavBarHeight = UIScreen.main.bounds.height / 5.5
     
     func shareApp() {
-        guard let url = URL(string: "https://apps.apple.com/app/board-log/id6575374222") else { return }
+        guard let url = URL(string: "https://apps.apple.com/app/win-your-way/id6651851652") else { return }
         let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
@@ -26,7 +26,7 @@ class SettingsViewModel: ObservableObject {
     }
     
     func openUsagePolicy() {
-        guard let url = URL(string: "https://www.termsfeed.com/live/7fc0ddbb-49fe-4605-9f10-ffa4877cb79a") else { return }
+        guard let url = URL(string: "https://www.termsfeed.com/live/d8c1e4cc-40b1-4cb4-b602-9b2f4b3a23b1") else { return }
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
