@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class DiaryViewModel: ObservableObject {
+   
+    @Published var notes: [Diary] = [
+        
+    ]
+    
+}

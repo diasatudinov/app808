@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Views {
-    case main, challenges, badges, settings
+    case main, challenges, badges, diary, settings
 }
 
 struct MainUIView: View {
@@ -28,6 +28,7 @@ struct MainUIView: View {
                         MainTwo(view: $view)
                         MainThree(view: $view)
                     }
+                    MainFive(view: $view)
                     Spacer()
                     MainFour(view: $view)
                 }.padding(.horizontal)
@@ -38,6 +39,8 @@ struct MainUIView: View {
                 BadgesUIView(view: $view, viewModel: badgesVM, challengeVM: challengesVM)
             case .settings:
                 SettingsUIView(viewModel: settingsVM, challengeVM: challengesVM, view: $view)
+            case .diary:
+                DiaryUIView(viewModel: DiaryViewModel(), view: $view)
             }
         }
     }
@@ -193,6 +196,43 @@ struct MainFour: View {
                 Spacer()
                 Button {
                     view = .settings
+                } label: {
+                    ZStack(alignment: .center) {
+                        Rectangle()
+                            .frame(width: 66, height: 34)
+                            .foregroundColor(.gray.opacity(0.24))
+                            .font(.system(size: 17, weight: .bold))
+                            .cornerRadius(16)
+                        
+                            Text("Open")
+                                .font(.system(size: 17))
+                            .foregroundColor(.white)
+                    }
+                }.padding()
+            }
+            
+        }.cornerRadius(20)
+            .frame(height: 74)
+    }
+}
+
+struct MainFive: View {
+    @Binding var view: Views
+    var body: some View {
+        ZStack {
+            Color.cardBg.ignoresSafeArea()
+            
+            HStack {
+                Image(systemName: "doc.text.fill")
+                    .font(.system(size: 22))
+                    .foregroundColor(.mainBtn)
+                    .padding()
+                Text("Diary")
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundColor(.white)
+                Spacer()
+                Button {
+                    view = .diary
                 } label: {
                     ZStack(alignment: .center) {
                         Rectangle()
