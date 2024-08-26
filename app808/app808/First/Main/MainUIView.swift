@@ -40,7 +40,7 @@ struct MainUIView: View {
             case .settings:
                 SettingsUIView(viewModel: settingsVM, challengeVM: challengesVM, view: $view)
             case .diary:
-                DiaryUIView(viewModel: DiaryViewModel(), view: $view)
+                DiaryUIView(viewModel: DiaryViewModel(), view: $view, challangesVM: challengesVM)
             }
         }
     }
