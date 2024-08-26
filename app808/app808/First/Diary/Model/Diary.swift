@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct Diary: Identifiable, Hashable, Codable {
+    var id = UUID()
+}
