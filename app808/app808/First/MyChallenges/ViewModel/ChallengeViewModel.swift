@@ -18,6 +18,28 @@ class ChallengeViewModel: ObservableObject {
         }
     }
     
+    func daysNum() -> Int {
+        var sum = 0
+        challenges.forEach { challenge in
+            sum += Int(challenge.totalDays)
+        }
+        return sum
+    }
+    
+    func challengesNum() -> Double {
+        Double(challenges.count)
+    }
+    
+    func complitedChallengesNum() -> Double {
+        var num = 0
+        challenges.forEach { challenge in
+            if challenge.isDone {
+                num += 1
+            }
+        }
+        return Double(num)
+    }
+    
     private let challengesFileName = "challenges.json"
     
     init() {
@@ -93,6 +115,25 @@ class ChallengeViewModel: ObservableObject {
     
     var completedChallengesCount: Int {
         challenges.filter { $0.isDone == true }.count
+    }
+    
+    func achievementsNum() -> Int {
+        var challangesNum = challenges.filter { $0.isDone == true }.count
+        if challenges.filter({ $0.isDone == true }).count > 0 && challenges.filter({ $0.isDone == true }).count < 5{
+            return 1
+        } else if challenges.filter({ $0.isDone == true }).count > 4 && challenges.filter({ $0.isDone == true }).count < 10{
+            return 2
+        } else if challenges.filter({ $0.isDone == true }).count > 9 && challenges.filter({ $0.isDone == true }).count < 15{
+            return 3
+        } else if challenges.filter({ $0.isDone == true }).count > 14 && challenges.filter({ $0.isDone == true }).count < 20{
+            return 4
+        } else if challenges.filter({ $0.isDone == true }).count > 19 && challenges.filter({ $0.isDone == true }).count < 25{
+            return 5
+        } else if challenges.filter({ $0.isDone == true }).count > 24 && challenges.filter({ $0.isDone == true }).count < 30{
+            return 6
+        }
+        return 0
+        
     }
     
     func reset() {
