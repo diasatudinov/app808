@@ -15,8 +15,9 @@ struct DiaryUIView: View {
     @ObservedObject var viewModel: DiaryViewModel
     @Binding var view: Views
     @State private var showAddNoteSheet = false
+    @State private var showNoteDetailsSheet = false
     @State private var selectedTab: Tab = .notes
-
+    @State private var selectedNote: Diary?
     @ObservedObject var challangesVM: ChallengeViewModel
     
     var body: some View {
@@ -106,11 +107,15 @@ struct DiaryUIView: View {
                         } else {
                             ScrollView {
                                 VStack(spacing: 8) {
-                                    ForEach(viewModel.notes, id:\.self) { challenge in
+                                    ForEach(viewModel.notes, id:\.self) { note in
     //                                    NavigationLink(destination: ChallengeDetails(viewModel: viewModel, challange: challenge)) {
     //                                        ChallengeCell(text: challenge.name, days: challenge.totalDays, daysFinish: challenge.finishedDays)
     //                                    }
-                                        
+                                        NotesCellUIView(emoji: note.emoji, title: note.title, description: note.description)
+                                            .onTapGesture {
+                                                selectedNote = note
+                                                showNoteDetailsSheet = true
+                                            }
                                     }
                                 }
                             }
@@ -140,7 +145,12 @@ struct DiaryUIView: View {
                 }.padding(.horizontal)
                     .padding(.top)
                     .sheet(isPresented: $showAddNoteSheet) {
-//                        NewChallengeUIView(viewModel: viewModel, showAddChallangeSheet: $showAddChallangeSheet)
+                        NewNoteUIView(viewModel: viewModel, showAddNoteSheet: $showAddNoteSheet)
+                    }
+                    .sheet(isPresented: $showNoteDetailsSheet) {
+                        if let selectedNote = selectedNote {
+                            NoteDetailsView(note: selectedNote, viewModel: viewModel, showAddNoteSheet: $showNoteDetailsSheet)
+                        }
                     }
             }
         }
