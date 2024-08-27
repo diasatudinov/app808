@@ -34,6 +34,9 @@
 		2BCD939A2C7CEB0E0021A6F6 /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD93992C7CEB0E0021A6F6 /* DiaryViewModel.swift */; };
 		2BCD939C2C7CEB620021A6F6 /* DiaryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD939B2C7CEB620021A6F6 /* DiaryUIView.swift */; };
 		2BCD939E2C7CEB710021A6F6 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD939D2C7CEB710021A6F6 /* Diary.swift */; };
+		2BCD93A02C7DB0010021A6F6 /* NotesCellUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD939F2C7DB0010021A6F6 /* NotesCellUIView.swift */; };
+		2BCD93A22C7DBAEC0021A6F6 /* NewNoteUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD93A12C7DBAEC0021A6F6 /* NewNoteUIView.swift */; };
+		2BCD93A42C7DCBA90021A6F6 /* NoteDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD93A32C7DCBA90021A6F6 /* NoteDetailsView.swift */; };
 		2BFA61B92C6CD1B700BF2A51 /* NewChallengeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA61B82C6CD1B700BF2A51 /* NewChallengeUIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		2BCD93992C7CEB0E0021A6F6 /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
 		2BCD939B2C7CEB620021A6F6 /* DiaryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUIView.swift; sourceTree = "<group>"; };
 		2BCD939D2C7CEB710021A6F6 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		2BCD939F2C7DB0010021A6F6 /* NotesCellUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCellUIView.swift; sourceTree = "<group>"; };
+		2BCD93A12C7DBAEC0021A6F6 /* NewNoteUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteUIView.swift; sourceTree = "<group>"; };
+		2BCD93A32C7DCBA90021A6F6 /* NoteDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsView.swift; sourceTree = "<group>"; };
 		2BFA61B82C6CD1B700BF2A51 /* NewChallengeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChallengeUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -291,6 +297,9 @@
 			isa = PBXGroup;
 			children = (
 				2BCD939B2C7CEB620021A6F6 /* DiaryUIView.swift */,
+				2BCD939F2C7DB0010021A6F6 /* NotesCellUIView.swift */,
+				2BCD93A12C7DBAEC0021A6F6 /* NewNoteUIView.swift */,
+				2BCD93A32C7DCBA90021A6F6 /* NoteDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -389,11 +398,13 @@
 				2B55F5F72C6A28BA0060D9B0 /* BadgesUIView.swift in Sources */,
 				2B55F5FB2C6A32EA0060D9B0 /* BadgesDetails.swift in Sources */,
 				2B55F6002C6A37170060D9B0 /* SettingsUIView.swift in Sources */,
+				2BCD93A22C7DBAEC0021A6F6 /* NewNoteUIView.swift in Sources */,
 				2B55F6142C6B93960060D9B0 /* Badge.swift in Sources */,
 				2BCD939A2C7CEB0E0021A6F6 /* DiaryViewModel.swift in Sources */,
 				2BFA61B92C6CD1B700BF2A51 /* NewChallengeUIView.swift in Sources */,
 				2B55F5E52C6642710060D9B0 /* UsOnboardingUIView.swift in Sources */,
 				2B55F60C2C6B5A650060D9B0 /* Challenge.swift in Sources */,
+				2BCD93A42C7DCBA90021A6F6 /* NoteDetailsView.swift in Sources */,
 				2BCD939C2C7CEB620021A6F6 /* DiaryUIView.swift in Sources */,
 				2B55F5E22C66424C0060D9B0 /* ReOnboardingUIView.swift in Sources */,
 				2B55F6102C6B5E440060D9B0 /* ChallengeDetails.swift in Sources */,
@@ -403,6 +414,7 @@
 				2B55F60A2C6B55780060D9B0 /* ChallengeCell.swift in Sources */,
 				2B55F5DD2C6640A30060D9B0 /* LoaderUIView.swift in Sources */,
 				2B55F6122C6B92090060D9B0 /* BadgesViewModel.swift in Sources */,
+				2BCD93A02C7DB0010021A6F6 /* NotesCellUIView.swift in Sources */,
 				2B55F5F12C6A12310060D9B0 /* MainUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

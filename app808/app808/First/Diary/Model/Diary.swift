@@ -9,4 +9,7 @@ import Foundation
 
 struct Diary: Identifiable, Hashable, Codable {
     var id = UUID()
+    var emoji: String
+    var title: String
+    var description: String
 }
