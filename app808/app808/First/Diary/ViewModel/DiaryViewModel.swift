@@ -9,11 +9,47 @@ import Foundation
 
 class DiaryViewModel: ObservableObject {
    
-    @Published var notes: [Diary] = [
-        Diary(emoji: "🥶", title: "Defining a goal and planning", description: "To achieve any goal, it is necessary to clearly formulate exactly what you want to achieve. The planning process includes: A description of the goal in a clear and specific for . Setting deadlines for achieving a goal (for example, in a month, six months, or a year). Dividing the overall goal into smaller steps or stages. Determining the resources needed to achieve the goal (financial, temporary, human). Create a schedule for each step. Assessment of possible obstacles and development of ways to overcome them."),
-        Diary(emoji: "🤩", title: "Defining a goal and planning", description: "To achieve any goal, it is necessary to clearly formulate exactly what you want to achieve. The planning process includes: A description of the goal in a clear and specific for . Setting deadlines for achieving a goal (for example, in a month, six months, or a year). Dividing the overall goal into smaller steps or stages. Determining the resources needed to achieve the goal (financial, temporary, human). Create a schedule for each step. Assessment of possible obstacles and development of ways to overcome them."),
-        Diary(emoji: "🤩", title: "Defining a goal and planning", description: "To achieve any goal, it is necessary to clearly formulate exactly what you want to achieve. The planning process includes: A description of the goal in a clear and specific for . Setting deadlines for achieving a goal (for example, in a month, six months, or a year). Dividing the overall goal into smaller steps or stages. Determining the resources needed to achieve the goal (financial, temporary, human). Create a schedule for each step. Assessment of possible obstacles and development of ways to overcome them.")
-    ]
+    @Published var notes: [Diary] = [ ] {
+        didSet {
+            saveChallenges()
+        }
+    }
+    private let challengesFileName = "notes.json"
+    
+    init() {
+        loadChallenges()
+    }
+    
+    private func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    private func challengesFilePath() -> URL {
+        return getDocumentsDirectory().appendingPathComponent(challengesFileName)
+    }
+    
+    private func saveChallenges() {
+        DispatchQueue.global().async {
+            let encoder = JSONEncoder()
+            do {
+                let data = try encoder.encode(self.notes)
+                try data.write(to: self.challengesFilePath())
+            } catch {
+                print("Failed to save players: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func loadChallenges() {
+        let decoder = JSONDecoder()
+        do {
+            let data = try Data(contentsOf: challengesFilePath())
+            notes = try decoder.decode([Diary].self, from: data)
+        } catch {
+            print("Failed to load players: \(error.localizedDescription)")
+        }
+    }
     
     func addNote(for note: Diary) {
         notes.append(note)
