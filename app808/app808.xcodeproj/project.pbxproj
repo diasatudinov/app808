@@ -37,6 +37,14 @@
 		2BCD93A02C7DB0010021A6F6 /* NotesCellUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD939F2C7DB0010021A6F6 /* NotesCellUIView.swift */; };
 		2BCD93A22C7DBAEC0021A6F6 /* NewNoteUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD93A12C7DBAEC0021A6F6 /* NewNoteUIView.swift */; };
 		2BCD93A42C7DCBA90021A6F6 /* NoteDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD93A32C7DCBA90021A6F6 /* NoteDetailsView.swift */; };
+		2BF2802A2C7F27D400336415 /* WebUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF280292C7F27D400336415 /* WebUIView.swift */; };
+		2BF2802D2C7F28B800336415 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2802C2C7F28B800336415 /* Info.swift */; };
+		2BF2802F2C7F28D500336415 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2802E2C7F28D500336415 /* API.swift */; };
+		2BF280312C7F2B9800336415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF280302C7F2B9800336415 /* AppDelegate.swift */; };
+		2BF280342C7F2BDA00336415 /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2BF280332C7F2BDA00336415 /* ApphudSDK */; };
+		2BF280372C7F2BF100336415 /* YandexMobileMetrica in Frameworks */ = {isa = PBXBuildFile; productRef = 2BF280362C7F2BF100336415 /* YandexMobileMetrica */; };
+		2BF280392C7F2BF100336415 /* YandexMobileMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 2BF280382C7F2BF100336415 /* YandexMobileMetricaCrashes */; };
+		2BF2803B2C7F2F4700336415 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2803A2C7F2F4700336415 /* Data.swift */; };
 		2BFA61B92C6CD1B700BF2A51 /* NewChallengeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA61B82C6CD1B700BF2A51 /* NewChallengeUIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +76,11 @@
 		2BCD939F2C7DB0010021A6F6 /* NotesCellUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCellUIView.swift; sourceTree = "<group>"; };
 		2BCD93A12C7DBAEC0021A6F6 /* NewNoteUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteUIView.swift; sourceTree = "<group>"; };
 		2BCD93A32C7DCBA90021A6F6 /* NoteDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsView.swift; sourceTree = "<group>"; };
+		2BF280292C7F27D400336415 /* WebUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUIView.swift; sourceTree = "<group>"; };
+		2BF2802C2C7F28B800336415 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		2BF2802E2C7F28D500336415 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2BF280302C7F2B9800336415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BF2803A2C7F2F4700336415 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2BFA61B82C6CD1B700BF2A51 /* NewChallengeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChallengeUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +90,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B55F5EC2C6642FC0060D9B0 /* OneSignalInAppMessages in Frameworks */,
+				2BF280392C7F2BF100336415 /* YandexMobileMetricaCrashes in Frameworks */,
 				2B55F5EA2C6642FC0060D9B0 /* OneSignalFramework in Frameworks */,
+				2BF280342C7F2BDA00336415 /* ApphudSDK in Frameworks */,
+				2BF280372C7F2BF100336415 /* YandexMobileMetrica in Frameworks */,
 				2B55F5EE2C6642FC0060D9B0 /* OneSignalLocation in Frameworks */,
 				2B55F5E82C6642FC0060D9B0 /* OneSignalExtension in Frameworks */,
 			);
@@ -105,10 +121,12 @@
 		2B55F5CC2C662F6C0060D9B0 /* app808 */ = {
 			isa = PBXGroup;
 			children = (
+				2BF2802B2C7F28A900336415 /* Manager */,
 				2B55F5DE2C6642160060D9B0 /* First */,
 				2B55F5DF2C66421B0060D9B0 /* Second */,
 				2B55F5DB2C6640900060D9B0 /* Loader */,
 				2B55F5CD2C662F6C0060D9B0 /* app808App.swift */,
+				2BF280302C7F2B9800336415 /* AppDelegate.swift */,
 				2B55F5CF2C662F6C0060D9B0 /* ContentView.swift */,
 				2B55F5D12C662F700060D9B0 /* Assets.xcassets */,
 				2B55F5D32C662F700060D9B0 /* Preview Content */,
@@ -148,6 +166,7 @@
 		2B55F5DF2C66421B0060D9B0 /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				2BF280282C7F27C100336415 /* WebView */,
 				2B55F5E32C6642520060D9B0 /* Onboarding */,
 			);
 			path = Second;
@@ -312,6 +331,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2BF280282C7F27C100336415 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				2BF280292C7F27D400336415 /* WebUIView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		2BF2802B2C7F28A900336415 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2BF2802C2C7F28B800336415 /* Info.swift */,
+				2BF2802E2C7F28D500336415 /* API.swift */,
+				2BF2803A2C7F2F4700336415 /* Data.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,6 +370,9 @@
 				2B55F5E92C6642FC0060D9B0 /* OneSignalFramework */,
 				2B55F5EB2C6642FC0060D9B0 /* OneSignalInAppMessages */,
 				2B55F5ED2C6642FC0060D9B0 /* OneSignalLocation */,
+				2BF280332C7F2BDA00336415 /* ApphudSDK */,
+				2BF280362C7F2BF100336415 /* YandexMobileMetrica */,
+				2BF280382C7F2BF100336415 /* YandexMobileMetricaCrashes */,
 			);
 			productName = app808;
 			productReference = 2B55F5CA2C662F6C0060D9B0 /* app808.app */;
@@ -364,6 +404,8 @@
 			mainGroup = 2B55F5C12C662F6C0060D9B0;
 			packageReferences = (
 				2B55F5E62C6642FC0060D9B0 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+				2BF280322C7F2BDA00336415 /* XCRemoteSwiftPackageReference "ApphudSDK" */,
+				2BF280352C7F2BF100336415 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */,
 			);
 			productRefGroup = 2B55F5CB2C662F6C0060D9B0 /* Products */;
 			projectDirPath = "";
@@ -392,10 +434,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B55F5D02C662F6C0060D9B0 /* ContentView.swift in Sources */,
+				2BF2803B2C7F2F4700336415 /* Data.swift in Sources */,
 				2B55F60E2C6B5B270060D9B0 /* ChallengeViewModel.swift in Sources */,
 				2B55F5F92C6A2F560060D9B0 /* BadgesCell.swift in Sources */,
+				2BF2802D2C7F28B800336415 /* Info.swift in Sources */,
+				2BF280312C7F2B9800336415 /* AppDelegate.swift in Sources */,
 				2B55F5CE2C662F6C0060D9B0 /* app808App.swift in Sources */,
 				2B55F5F72C6A28BA0060D9B0 /* BadgesUIView.swift in Sources */,
+				2BF2802F2C7F28D500336415 /* API.swift in Sources */,
 				2B55F5FB2C6A32EA0060D9B0 /* BadgesDetails.swift in Sources */,
 				2B55F6002C6A37170060D9B0 /* SettingsUIView.swift in Sources */,
 				2BCD93A22C7DBAEC0021A6F6 /* NewNoteUIView.swift in Sources */,
@@ -416,6 +462,7 @@
 				2B55F6122C6B92090060D9B0 /* BadgesViewModel.swift in Sources */,
 				2BCD93A02C7DB0010021A6F6 /* NotesCellUIView.swift in Sources */,
 				2B55F5F12C6A12310060D9B0 /* MainUIView.swift in Sources */,
+				2BF2802A2C7F27D400336415 /* WebUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +686,22 @@
 				minimumVersion = 5.2.2;
 			};
 		};
+		2BF280322C7F2BDA00336415 /* XCRemoteSwiftPackageReference "ApphudSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apphud/ApphudSDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
+		2BF280352C7F2BF100336415 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "Https://github.com/yandexmobile/metrica-sdk-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -661,6 +724,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B55F5E62C6642FC0060D9B0 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
 			productName = OneSignalLocation;
+		};
+		2BF280332C7F2BDA00336415 /* ApphudSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BF280322C7F2BDA00336415 /* XCRemoteSwiftPackageReference "ApphudSDK" */;
+			productName = ApphudSDK;
+		};
+		2BF280362C7F2BF100336415 /* YandexMobileMetrica */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BF280352C7F2BF100336415 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */;
+			productName = YandexMobileMetrica;
+		};
+		2BF280382C7F2BF100336415 /* YandexMobileMetricaCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BF280352C7F2BF100336415 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */;
+			productName = YandexMobileMetricaCrashes;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
