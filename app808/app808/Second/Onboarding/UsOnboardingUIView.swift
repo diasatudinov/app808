@@ -17,7 +17,7 @@ struct UsOnboardingUIView: View {
     @State private var pageNum: Int = 1
     @AppStorage("onboardingShowed") var onboardingShowed: Bool = false
 
-    
+    @State var decodeString: String
     var body: some View {
         if !onboardingShowed {
             if pageNum < 3 {
@@ -190,13 +190,11 @@ struct UsOnboardingUIView: View {
                     }
                     
                 } else {
-                    Text("WebUIView")
-                    //WebUIView()
+                    WebUIView(decodeString: decodeString)
                 }
             }
         } else {
-            Text("WebUIView")
-            //WebUIView()
+            WebUIView(decodeString: decodeString)
         }
     }
     
@@ -219,5 +217,5 @@ struct UsOnboardingUIView: View {
 }
 
 #Preview {
-    UsOnboardingUIView()
+    UsOnboardingUIView(decodeString: "aHR0cHM6Ly9wb2RsYW9ybGYuc3BhY2UvUmtZVzF5eW0")
 }
