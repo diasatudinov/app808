@@ -29,11 +29,14 @@ struct LoaderUIView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    Image("logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 371)
-                        .padding(.top, UIScreen.main.bounds.height / 15)
+                    Spacer()
+                    HStack() {
+                        Image("logo1")
+                            .scaledToFit()
+                        Image("logo2")
+                            .scaledToFit()
+                    }
+                    Spacer()
                     Spacer()
                     ZStack {
                         
@@ -77,7 +80,7 @@ struct LoaderUIView: View {
                             print(response.pasted)
                         }
                 } else {
-                    UsOnboardingUIView(decodeString: response.isIdentical)
+                    UsOnboardingUIView(decodeString: response.focused)
                         .onAppear {
                             print(response.pasted)
                         }

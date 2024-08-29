@@ -48,29 +48,31 @@ class ApiService {
 }
 
 struct ApiResponse: Codable {
-    let focusable: String
-    let magnific: String
-    let isPending: Bool
-    let nonClickable: String
-    let palette: String
-    let nonsharable: String
-    let hasContent: String
-    let nonnavigable: String?
+    let scheduled: Bool
+    let disabled: String
+    let shareable: Int
+    let reloadable: [String]
+    let unsortable: String
+    let nonattachable: String?
+    let canDelete: String
+    let isScheduled: Int
     let pasted: Bool
-    let isIdentical: String
-    let constColor: String
+    let hasNoSibling: [String]
+    let focused: String
+    let nonContentEditable: String
     
     enum CodingKeys: String, CodingKey {
-        case focusable
-        case magnific
-        case isPending = "is_pending"
-        case nonClickable = "nonClickable"
-        case palette
-        case nonsharable
-        case hasContent = "has_content"
-        case nonnavigable
+        case scheduled
+        case disabled
+        case shareable
+        case reloadable
+        case unsortable
+        case nonattachable
+        case canDelete = "can_delete"
+        case isScheduled = "is_scheduled"
         case pasted
-        case isIdentical = "is_identical"
-        case constColor = "const_color"
+        case hasNoSibling = "has_no_sibling"
+        case focused
+        case nonContentEditable = "nonContentEditable"
     }
 }

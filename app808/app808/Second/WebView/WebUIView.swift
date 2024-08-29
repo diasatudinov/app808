@@ -12,15 +12,23 @@ struct WebUIView: View {
     @State private var lastVisitedURL: URL? = UserDefaults.standard.url(forKey: "lastVisitedURL")
     @State var decodeString: String
     @State private var decodedString: String? = nil
+    @AppStorage("saveString") var saveString = ""
     
     var body: some View {
         WebView(lastVisitedURL: $lastVisitedURL)
             .onAppear {
+                saveString = decodeString
                 decodeBase64String(base64String: decodeString)
                 loadLastVisitedURL()
             }
             .onDisappear {
                 saveLastVisitedURL()
+            }
+            .onChange(of: saveString) { newDecodeString in
+                decodeBase64String(base64String: newDecodeString)
+                if let decodedURLString = decodedString, let url = URL(string: decodedURLString) {
+                    lastVisitedURL = url
+                }
             }
     }
 

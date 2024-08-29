@@ -14,6 +14,6 @@ struct Info {
     let metricaID = "9f28cb4b-3479-4780-a789-02a1b6b04fdf"
     let usagePolicy = "https://www.termsfeed.com/live/d8c1e4cc-40b1-4cb4-b602-9b2f4b3a23b1"
     let oneSignal = "16ff35e-1ff0-426d-a3ed-faac5e5240d6"
-    let techCode: String = "is_pending"
+    let techCode: String = "scheduled"
     
 }
